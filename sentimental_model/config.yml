@@ -1,0 +1,57 @@
+# Package Overview
+package_name: az_senti_model
+
+# Data Files
+training_data_file: https://cdn.iisc.talentsprint.com/AIandMLOps/MiniProjects/Datasets/Reviews.csv 
+test_data_file: test.csv
+
+# Variables
+# The variable we are attempting to predict (Survival)
+target: Sentiment
+
+model_name: sentimental_model_
+model_save_file: sentimental__model_v
+tokenizer_save_file: sentimental_tokenizer_v
+
+
+features:      # final features to be use
+  - Text
+
+
+unused_fields:  # Features to drop before pipeline
+  - Id
+  - HelpfulnessNumerator
+  - HelpfulnessDenominator
+
+epoch_list:
+  - 20
+  - 30
+
+Score_Sentiment_mapping:
+    1: 0
+    2: 0
+    3: 1
+    4: 1
+    5: 1
+ 
+
+# set train/test split
+train_size: 0.10
+valid_size: 0.10
+
+# to set the random seed
+random_state: 25
+# alogrithm parameters
+n_estimators: 100
+max_depth: 10
+num_tokenizer_words: 5000
+max_seq_len: 1000
+
+
+
+
+
+
+
+
+

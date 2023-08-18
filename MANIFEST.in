@@ -1,0 +1,17 @@
+include *.txt
+include *.md
+include *.pkl
+recursive-include ./az_senti_model *
+
+include az_senti_model/datasets/IRIS.csv
+include az_senti_model/trained_models/*.pkl
+include az_senti_model/VERSION
+include az_senti_model/config.yml
+
+include ./requirements/requirements.txt
+include ./requirements/test_requirements.txt
+exclude *.log
+exclude *.cfg
+
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
